@@ -29,7 +29,7 @@ function mainController($scope, $http) {
     $scope.select = function(idStudent){
         $scope.selected = $scope.students.filter(function(student){
             return ( student.id == idStudent );
-        })
+        })[0]
         console.log($scope.selected);
     }
 }
