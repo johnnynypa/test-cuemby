@@ -2,8 +2,8 @@ var express = require('express');
 var bodyParser = require('body-parser');
 var logger = require('morgan');
 
-var app = express();
 
+var app = express();
 // Localización de los ficheros estÃ¡ticos
 app.use(express.static(__dirname + '/public'));
 

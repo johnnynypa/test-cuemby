@@ -4,14 +4,24 @@
   "description": "",
   "main": "server/index.js",
   "scripts": {
-    "start": "nodemon --watch server/ --exec node index.js",
+    "build-task:scss-compile": "node-sass-chokidar --source-map true sass/ -o public/styles",
+    "build-task:autoprefixer": "postcss public/styles/*.css --use autoprefixer -d public/styles",
+    "sass:build": "npm-run-all -p build-task:*",
+    "sass:watch": "chokidar 'src/scss/**/*.scss' -c 'npm run sass:build'",
+    "dev": "npm-run-all -p sass:* js:*",
+    "js:server": "nodemon --watch server/ --exec node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "autoprefixer": "^7.1.5",
     "body-parser": "^1.18.2",
+    "chokidar-cli": "^1.2.0",
     "express": "^4.16.2",
-    "morgan": "^1.9.0"
+    "morgan": "^1.9.0",
+    "node-sass-chokidar": "0.0.3",
+    "npm-run-all": "^4.1.1",
+    "postcss-cli": "^4.1.1"
   }
 }
