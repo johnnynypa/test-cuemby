@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Angular TODO app</title>
     <link rel="stylesheet" href="styles/index.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular.min.js"></script>
+    <script src="main.js"></script>
 </head>
 <body ng-controller="mainController">
 
@@ -28,7 +30,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr ng-repeat="student in students">
+                    <tr ng-repeat="student in students" ng-click="select(student.id)">
                         <td>{{student.id}}</td>
                         <td>{{student.name}}</td>
                         <td>{{student.yearsOld}}</td>
@@ -40,10 +42,24 @@
 
         <!-- DETAILS -->
         <div class="children-container flex justify-center-center">
-
+            <h2 ng-if="!selected" >
+                Click on a student to see their details
+            </h2>
+            <div ng-if="selected">
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <p>ID</p>
+                            </td>
+                            <td>
+                                <p>{{selected[0].id}}</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
     </div>
-    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js"></script>
-    <script src="main.js"></script>
 </body>
 </html>

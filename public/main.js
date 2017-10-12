@@ -1,13 +1,16 @@
-var appCuemby = angular.module('cuembyTest', [])
+angular
+.module('cuembyTest', [])
+.controller('mainController', mainController)
+
 
 function mainController($scope, $http) {
-	$scope.formData = {};
-
+	
 	// Cuando se cargue la página, pide del API todos los TODOs
 	$http.post('/api/students')
-		.success(function(data) {
+		.then(function(response) {
+
             //just active students
-			$scope.students = data.students.filter(function(student){
+			$scope.students = response.data.students.filter(function(student){
                 return (student.active);
             })
             //calculating your mean
@@ -15,16 +18,19 @@ function mainController($scope, $http) {
                 student.mean = student.grades.reduce((prev, cur) => prev + cur, 0)/3;
                 return student;
             })
-			console.log($scope.students);
+            console.log($scope.students);
 		})
-		.error(function(data) {
+		.catch(function(data) {
 			console.log('Error: ' + data);
-		});
+        });
+
+    $scope.selected = null;
+
+    $scope.select = function(idStudent){
+        $scope.selected = $scope.students.filter(function(student){
+            return ( student.id == idStudent );
+        })
+        console.log($scope.selected);
+    }
 }
 
-appCuemby.directive('note', function(){
-    return{
-        restrict: 'E',
-        template:'<div> Hola Mundo <div>'
-    }
-})
