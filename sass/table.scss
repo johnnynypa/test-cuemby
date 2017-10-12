@@ -1,18 +1,27 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu');
+
 table{
     margin-top: 5vh;
     width: 90%;
     border-collapse: collapse;
+    
     th, td{
-        border: .3px solid grey;
         vertical-align: center;
+        font-family: 'Ubuntu', sans-serif;
+        border: none;
     }
     th{
-        background-color: #1D1822;
-        color: white;
-        text-align: center;
+        color: #8A898C;
+        text-align: left;
+        font-size: 20px;
+        font-weight: 700;
     }
     td{
         text-align: start;
+        font-size: 16px;
+        font-weight: 900;
+        color: #313131;
+        border-spacing: 0;         
     }
     thead{
         tr{
@@ -22,7 +31,16 @@ table{
     tbody{
         tr{
             height: 40px;
-            
+            border-radius: 3px;
+            &:hover{
+                background-color: #D1C2E0;
+            }
+        }
+        tr:nth-child(odd){
+            background-color: #CBCBCB;
+        }
+        tr:nth-child(even){
+            background-color: white;
         }
     }
 }
