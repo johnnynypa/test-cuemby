@@ -1,2 +1,18 @@
-
-/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJ0YWJsZS5jc3MifQ== */
+table {
+  margin-top: 5vh;
+  width: 90%;
+  border-collapse: collapse; }
+  table th, table td {
+    border: .3px solid grey;
+    vertical-align: center; }
+  table th {
+    background-color: #1D1822;
+    color: white;
+    text-align: center; }
+  table td {
+    text-align: start; }
+  table thead tr {
+    height: 70px; }
+  table tbody tr {
+    height: 40px; }
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uL3Nhc3MvdGFibGUuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNJLGdCQUFlO0VBQ2YsV0FBVTtFQUNWLDBCQUF5QixFQXdCNUI7RUEzQkQ7SUFLUSx3QkFBdUI7SUFDdkIsdUJBQXNCLEVBQ3pCO0VBUEw7SUFTUSwwQkFBeUI7SUFDekIsYUFBWTtJQUNaLG1CQUFrQixFQUNyQjtFQVpMO0lBY1Esa0JBQWlCLEVBQ3BCO0VBZkw7SUFrQlksYUFBWSxFQUNmO0VBbkJUO0lBdUJZLGFBQVksRUFFZiIsImZpbGUiOiJ0YWJsZS5jc3MifQ== */
