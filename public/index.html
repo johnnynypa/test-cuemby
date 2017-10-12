@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en" ng-app="cuembyTest">
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Angular TODO app</title>
+</head>
+<body ng-controller="mainController">
+	<div class="container"> 
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>Years Old</th>
+                    <th>Mean</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="student in students">
+                    <td>{{student.id}}</td>
+                    <td>{{student.name}}</td>
+                    <td>{{student.yearsOld}}</td>
+                    <td>{{student.mean}}</td>
+                </tr>
+            </tbody>
+        </table>
+        
+    </div>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
