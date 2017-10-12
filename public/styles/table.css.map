@@ -1,0 +1,9 @@
+{
+	"version": 3,
+	"file": "table.css",
+	"sources": [
+		"../../sass/table.scss"
+	],
+	"names": [],
+	"mappings": ""
+}
