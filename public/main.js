@@ -7,7 +7,7 @@ function mainController($scope, $http) {
 	
 	// Get data by server
 	$http.post('/api/students')
-		.then(function(response) {
+        .then(function(response) {
 
             //validate if array
             if (Array.isArray(response.data.students)){
@@ -36,12 +36,12 @@ function mainController($scope, $http) {
                 //if there are no available students received by the server an empty Array is returned
                 $scope.student = []
             }
-			
+            
             console.log($scope.students);
-		})
-		.catch(function(data) {
-			console.log('Error: ' + data);
-        });
+        })
+        .catch(function(data) {
+            console.log('Error: ' + data);
+    });
 
     //Student Selected
     $scope.selected = null;
@@ -69,7 +69,4 @@ function mainController($scope, $http) {
             return "grade-green";
         }
     }
-
-    
 }
-
