@@ -1,8 +1,11 @@
 header{
     width: 100vw;
-    background-color: #1D1822;
-    height: 17vh;
+    background-color: #21232A;
+    height: 30vh;
+    display: flex;
+    justify-content: center;
     img{
+        margin-top: 10px;
         max-height: 80px;
     }
 }

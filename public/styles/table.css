@@ -1,32 +1,27 @@
-@import url("https://fonts.googleapis.com/css?family=Ubuntu");
 table {
-  margin-top: 5vh;
-  width: 90%;
+  margin-top: -70px;
+  width: 55%;
+  background-color: white;
   border-collapse: collapse; }
   table th, table td {
     vertical-align: center;
-    font-family: 'Ubuntu', sans-serif;
     border: none; }
   table th {
-    color: #8A898C;
-    text-align: left;
-    font-size: 20px;
-    font-weight: 700; }
+    color: #00C459;
+    text-align: center;
+    font-size: 28px;
+    font-weight: bold; }
   table td {
     text-align: start;
-    font-size: 16px;
+    font-size: 20px;
     font-weight: 900;
-    color: #313131;
-    border-spacing: 0; }
+    color: #393939; }
   table thead tr {
-    height: 70px; }
+    height: 70px;
+    background-color: #2E313E; }
   table tbody tr {
     height: 40px;
     border-radius: 3px; }
     table tbody tr:hover {
       background-color: #D1C2E0; }
-  table tbody tr:nth-child(odd) {
-    background-color: #CBCBCB; }
-  table tbody tr:nth-child(even) {
-    background-color: white; }
-/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uL3Nhc3MvdGFibGUuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQSw4REFBWTtBQUVaO0VBQ0ksZ0JBQWU7RUFDZixXQUFVO0VBQ1YsMEJBQXlCLEVBd0M1QjtFQTNDRDtJQU1RLHVCQUFzQjtJQUN0QixrQ0FBaUM7SUFDakMsYUFBWSxFQUNmO0VBVEw7SUFXUSxlQUFjO0lBQ2QsaUJBQWdCO0lBQ2hCLGdCQUFlO0lBQ2YsaUJBQWdCLEVBQ25CO0VBZkw7SUFpQlEsa0JBQWlCO0lBQ2pCLGdCQUFlO0lBQ2YsaUJBQWdCO0lBQ2hCLGVBQWM7SUFDZCxrQkFBaUIsRUFDcEI7RUF0Qkw7SUF5QlksYUFBWSxFQUNmO0VBMUJUO0lBOEJZLGFBQVk7SUFDWixtQkFBa0IsRUFJckI7SUFuQ1Q7TUFpQ2dCLDBCQUF5QixFQUM1QjtFQWxDYjtJQXFDWSwwQkFBeUIsRUFDNUI7RUF0Q1Q7SUF3Q1ksd0JBQXVCLEVBQzFCIiwiZmlsZSI6InRhYmxlLmNzcyJ9 */
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uL3Nhc3MvdGFibGUuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFFQTtFQUNJLGtCQUhZO0VBSVosV0FBVTtFQUNWLHdCQUF1QjtFQUN2QiwwQkFBeUIsRUFpQzVCO0VBckNEO0lBT1EsdUJBQXNCO0lBQ3RCLGFBQVksRUFDZjtFQVRMO0lBV1EsZUFBYztJQUNkLG1CQUFrQjtJQUNsQixnQkFBZTtJQUNmLGtCQUFpQixFQUNwQjtFQWZMO0lBaUJRLGtCQUFpQjtJQUNqQixnQkFBZTtJQUNmLGlCQUFnQjtJQUNoQixlQUFjLEVBQ2pCO0VBckJMO0lBd0JZLGFBMUJJO0lBMkJKLDBCQUF5QixFQUM1QjtFQTFCVDtJQThCWSxhQUFZO0lBQ1osbUJBQWtCLEVBSXJCO0lBbkNUO01BaUNnQiwwQkFBeUIsRUFDNUIiLCJmaWxlIjoidGFibGUuY3NzIn0= */

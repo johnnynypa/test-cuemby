@@ -13,9 +13,21 @@ function mainController($scope, $http) {
 			$scope.students = response.data.students.filter(function(student){
                 return (student.active);
             })
+
             //calculating your mean
             .map( function(student) {
-                student.mean = student.grades.reduce((prev, cur) => prev + cur, 0)/3;
+
+                // Number of grades
+                const notes = student.grades.length; 
+
+                student.mean = student.grades.reduce(
+                    //Calculate sum
+                    (prev, cur) => prev + cur
+                    , 0
+                ) / notes; //Get Average
+
+                //maximum of two decimal places
+                student.mean = student.mean.toFixed(2);
                 return student;
             })
             console.log($scope.students);
@@ -27,6 +39,7 @@ function mainController($scope, $http) {
     $scope.selected = null;
 
     $scope.select = function(idStudent){
+        //Get student selected by his Id
         $scope.selected = $scope.students.filter(function(student){
             return ( student.id == idStudent );
         })[0]

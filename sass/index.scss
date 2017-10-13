@@ -1,24 +1,13 @@
+@import url('https://fonts.googleapis.com/css?family=Rajdhani');
+
 *{
     padding: 0;
     margin: 0;
-    font-family: sans-serif;
+    font-family: 'Rajdhani', sans-serif;    
 }
 
-.flex{
-    display: flex;
-}
-
-.flex-row{
-    flex-direction: row;
-}
-
-.justify-center{
-    justify-content: center;
-}
-
-.justify-center-center{
-    justify-content: center;
-    align-items: center;
+body{
+    background-color: #EDEDED;
 }
 
 @import "header";
