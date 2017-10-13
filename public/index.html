@@ -23,43 +23,47 @@
             <table class="table">
                 <thead>
                     <tr>
-                        <th class="th-id" >Id</th>
-                        <th class="th-name" >Name</th>
-                        <th class="th-years" >Years Old</th>
-                        <th class="th-mean" >Mean</th>
+                        <th class="colum-id th-id" >Id</th>
+                        <th class="colum-name th-name" >Name</th>
+                        <th class="colum-years th-years" >Years Old</th>
+                        <th class="colum-mean th-mean" >Mean</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr ng-repeat="student in students" ng-click="select(student.id)">
-                        <td>{{student.id}}</td>
-                        <td>{{student.name}}</td>
-                        <td>{{student.yearsOld}}</td>
-                        <td>{{student.mean}}</td>
+                    <tr ng-repeat="student in students" ng-click="select(student.id)" style="{{regColor(student)}}">
+                        <td class="colum-id" >{{student.id}}</td>
+                        <td  class="colum-name" >{{student.name}}</td>
+                        <td class="colum-years" >{{student.yearsOld}}</td>
+                        <td  class="colum-mean" >{{student.mean}}</td>
                     </tr>
                 </tbody>
             </table>
         </div>
 
         <!-- DETAILS -->
-        <!-- <div class="children-container flex justify-center-center">
+        <div class="container-details">
             <h2 ng-if="!selected" >
                 Click on a student to see their details
             </h2>
-            <div ng-if="selected">
-                <table>
-                    <tbody>
-                        <tr>
-                            <td>
-                                <p>ID</p>
-                            </td>
-                            <td>
-                                <p>{{selected.id}}</p>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
+            <div class="details" ng-if="selected">
+                <div class="details-section  details-left">
+                    <div> <h2>ID:  </h2> <p> {{selected.id}}</p></div>
+                    <div> <h2>Name:  </h2> <p> {{selected.name}}</p></div>
+                    <div> <h2>Years Old:  </h2> <p> {{selected.yearsOld}}</p></div>
+                </div>
+                <div class="details-section details-right">
+                    <div class="grades" >
+                        <h2>Grades:  </h2>
+                        <div>
+                            <p ng-repeat="grade in selected.grades" class="{{class(grade)}}" >
+                                {{grade}}
+                            </p>
+                        </div>
+                    </div>
+                    <div> <h2>Mean:  </h2> <p> {{selected.mean}}</p></div>
+                </div>
             </div>
-        </div> -->
+        </div>
     </div>
 </body>
 </html>

@@ -5,7 +5,7 @@ angular
 
 function mainController($scope, $http) {
 	
-	// Cuando se cargue la página, pide del API todos los TODOs
+	// Get data by server
 	$http.post('/api/students')
 		.then(function(response) {
 
@@ -36,6 +36,7 @@ function mainController($scope, $http) {
 			console.log('Error: ' + data);
         });
 
+    //Student Selected
     $scope.selected = null;
 
     $scope.select = function(idStudent){
@@ -45,5 +46,23 @@ function mainController($scope, $http) {
         })[0]
         console.log($scope.selected);
     }
+
+    //color of the record according to received data
+    $scope.regColor = function(student){
+        return "color:"+student.color;
+    }
+
+    //color of the letter according to grade
+    $scope.class = function(grade){
+        if(grade < 3){
+            return "grade-red";
+        }else if(grade >= 3 && grade<4){
+            return "grade-yellow";
+        }else{
+            return "grade-green";
+        }
+    }
+
+    
 }
 

@@ -10,7 +10,13 @@ $widthContainer : 47vw;
 
 .container-table{
     width: 100%;
-    height:  50vh;
+    height:  $heightContainer/2;
     display: flex;
     justify-content: center;
+}
+
+.container-details{
+    display: flex;
+    justify-content: center;
+    height: $heightContainer/2;
 }
