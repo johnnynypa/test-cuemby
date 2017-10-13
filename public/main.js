@@ -9,27 +9,34 @@ function mainController($scope, $http) {
 	$http.post('/api/students')
 		.then(function(response) {
 
+            //validate if array
+            if (Array.isArray(response.data.students)){
             //just active students
-			$scope.students = response.data.students.filter(function(student){
-                return (student.active);
-            })
+                $scope.students = response.data.students.filter(function(student){
+                    return (student.active==true && Array.isArray(student.grades));
+                })
 
             //calculating your mean
-            .map( function(student) {
+                .map( function(student) {
 
-                // Number of grades
-                const notes = student.grades.length; 
+                    // Number of grades
+                    const notes = student.grades.length; 
+                    
+                    student.mean = student.grades.reduce(
+                        //Calculate sum
+                        (prev, cur) => prev + cur
+                        , 0
+                    ) / notes; //Get Average
 
-                student.mean = student.grades.reduce(
-                    //Calculate sum
-                    (prev, cur) => prev + cur
-                    , 0
-                ) / notes; //Get Average
-
-                //maximum of two decimal places
-                student.mean = student.mean.toFixed(2);
-                return student;
-            })
+                    //maximum of two decimal places
+                    student.mean = student.mean.toFixed(2);
+                    return student;
+                })
+            }else{
+                //if there are no available students received by the server an empty Array is returned
+                $scope.student = []
+            }
+			
             console.log($scope.students);
 		})
 		.catch(function(data) {

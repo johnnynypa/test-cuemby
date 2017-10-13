@@ -30,7 +30,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr ng-repeat="student in students" ng-click="select(student.id)" style="{{regColor(student)}}">
+                    <tr ng-repeat="student in students" ng-if="student.id" ng-click="select(student.id)" style="{{regColor(student)}}">
                         <td class="colum-id" >{{student.id}}</td>
                         <td  class="colum-name" >{{student.name}}</td>
                         <td class="colum-years" >{{student.yearsOld}}</td>
@@ -42,7 +42,10 @@
 
         <!-- DETAILS -->
         <div class="container-details">
-            <h2 ng-if="!selected" >
+            <h2 ng-if="!students" >
+                    No students available
+            </h2>
+            <h2 ng-if="!selected && students" >
                 Click on a student to see their details
             </h2>
             <div class="details" ng-if="selected">
@@ -55,7 +58,7 @@
                     <div class="grades" >
                         <h2>Grades:  </h2>
                         <div>
-                            <p ng-repeat="grade in selected.grades" class="{{class(grade)}}" >
+                            <p ng-repeat="grade in selected.grades track by $index" class="{{class(grade)}}" >
                                 {{grade}}
                             </p>
                         </div>
