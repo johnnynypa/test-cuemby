@@ -5,19 +5,30 @@ table{
     width: 55%;
     background-color: white;
     border-collapse: collapse;
-    
+
+    //Scrollabel
+        tbody {
+            display:block;
+            height:100%;
+            overflow:auto;
+        }
+
+        thead, tbody tr {
+            display:table;
+            width:100%;
+            table-layout:fixed;/* even columns width , fix width of table too*/
+        }
+
     th, td{
         vertical-align: center;
         border: none;
+        text-align: center;
     }
     th{
-        color: #00C459;
-        text-align: center;
-        font-size: 28px;
+        font-size: 38px;
         font-weight: bold;
     }
     td{
-        text-align: start;
         font-size: 20px;
         font-weight: 900;
         color: #393939;         
@@ -37,4 +48,24 @@ table{
             }
         }
     }
+}
+
+.th-id{
+    width: 12%;
+    color: #00C459;
+}
+
+.th-name{
+    width: 40%;
+    color: #3498db;
+}
+
+.th-years{
+    width: 23%;
+    color: #E93C4C;
+}
+
+.th-mean{
+    width: 25%;
+    color: #9b59b6;
 }
