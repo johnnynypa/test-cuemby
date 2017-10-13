@@ -10,7 +10,7 @@ body{
     background-color: #EDEDED;
 }
 
-@import "header";
-@import "container";
-@import "table";
-@import "details";
+@import url("header.css");
+@import url("container.css");
+@import url("table.css");
+@import url("details.css");

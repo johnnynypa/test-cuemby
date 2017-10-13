@@ -2,13 +2,10 @@ header {
   width: 100vw;
   background-color: #21232A;
   height: 30vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center; }
+  justify-content: center; }
   header img {
     margin-top: 10px;
     max-height: 80px; }
-/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uL3Nhc3MvaGVhZGVyLnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDSSxhQUFZO0VBQ1osMEJBQXlCO0VBQ3pCLGFBQVk7RUFDWixxQkFBYTtFQUFiLHFCQUFhO0VBQWIsY0FBYTtFQUNiLHlCQUF1QjtNQUF2QixzQkFBdUI7VUFBdkIsd0JBQXVCLEVBSzFCO0VBVkQ7SUFPUSxpQkFBZ0I7SUFDaEIsaUJBQWdCLEVBQ25CIiwiZmlsZSI6ImhlYWRlci5jc3MifQ== */
+
+/*# sourceMappingURL=header.css.map */
