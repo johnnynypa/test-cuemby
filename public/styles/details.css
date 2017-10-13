@@ -3,7 +3,8 @@
   display: flex;
   justify-content: center;
   flex-direction: row;
-  align-items: center; }
+  align-items: center;
+  border-top: solid 1px rgba(104, 104, 104, 0.3); }
 
 .details-section {
   width: 27%;
