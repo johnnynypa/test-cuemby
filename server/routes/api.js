@@ -48,7 +48,7 @@ var dataPrueba = {
             "id": 606,
             "name":"Melissa",
             "active": true,
-            "grades": 3,
+            "grades": 3, //To verify that it only accepts Array
             "yearsOld":19,
             "color":"yellow"
         },    

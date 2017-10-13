@@ -30,7 +30,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr ng-repeat="student in students" ng-if="student.id" ng-click="select(student.id)" style="{{regColor(student)}}">
+                    <tr ng-repeat="student in students track by $index" ng-if="student.id" ng-click="select(student.id)" style="{{regColor(student)}}">
                         <td class="colum-id" >{{student.id}}</td>
                         <td  class="colum-name" >{{student.name}}</td>
                         <td class="colum-years" >{{student.yearsOld}}</td>
